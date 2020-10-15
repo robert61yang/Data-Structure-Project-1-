@@ -160,7 +160,7 @@ void put_square(int sq[4][4],int start, int move)
 int test_overlap(int sq[4][4], int r, int c)
 {
     for(int i=3;i>=0;i--){
-        for(int j=0;j<4;j++){
+        for(int j=0;j<4 && c+j < col;j++){
             if(sq[i][j] == 1 && table[r+i][c+j] == 1)
                 return -1;
         }
