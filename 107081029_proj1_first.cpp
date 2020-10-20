@@ -43,6 +43,7 @@ int main(int argc, char* argv[])
         return 1;
     }
     inFile>>row>>col;
+    row += 4;
 
     maketable();
 
@@ -103,7 +104,7 @@ int main(int argc, char* argv[])
         cout<<"cannot open myout"<<endl;
         return 1;
     }
-    for(int i=0;i<row;i++){
+    for(int i=4;i<row;i++){
         for(int j=0;j<col;j++){
             outFile<<table[i][j];
             if(j != col-1) outFile<<" ";
